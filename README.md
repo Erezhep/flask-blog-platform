@@ -1,60 +1,67 @@
-# Flask Web Blog
+# Flask Blog Platform
 
-**Flask веб-приложение для создания и управления блог-постами.**
-Этот проект представляет собой мини-блог, разработанный с использованием Flask, SQLAlchemy и Flask-Login. Он позволяет пользователям регистрироваться, входить в систему, публиковать статьи, просматривать статьи других пользователей, редактировать свой профиль и многое другое.
+A web-based blogging platform built with Flask that allows users to create, manage, and publish articles.
 
-## 🌐 Деплой / демо
-- Тестовый деплой на Google Cloud: http://34.41.6.81  
-  > Примечание: IP — тестовый, без HTTPS/домена, только для проверки.
+The application includes user authentication, profile management, and content publishing features implemented using Flask, SQLAlchemy, and Flask-Login.
 
-## Как использовать
+## Features
 
-1. Установите необходимые зависимости, указанные в `requirements.txt`.
-2. Создайте базу данных с помощью команды `flask db init`, `flask db migrate`, `flask db upgrade`.
-3. Запустите приложение с помощью команды `python app.py`.
-4. Откройте браузер и перейдите на `http://localhost:5000/` для доступа к приложению.
+* User registration and authentication
+* Create, edit, and delete blog posts
+* Personal profile management
+* Public article feed
+* Rich text content editing
+* User-specific post management
 
-## 🌎 Стек и технологии
-- Python 3.x
-- Flask
-- SQLAlchemy
-- HTML/CSS (шаблоны)
-- Bootstrap (опционально)
+## Technology Stack
 
-## ⚙️ Основной функционал
-- Создание, редактирование и удаление постов
-- Просмотр всех постов на главной странице
-- Удобный веб-интерфейс для пользователя
+* Python
+* Flask
+* SQLAlchemy
+* Flask-Login
+* Flask-CKEditor
+* SQLite
+* HTML / CSS
+* Bootstrap
 
-## 📂 Структура проекта
-- `app.py` — основной backend на Flask
-- `templates/` — HTML-шаблоны
-- `static/` — CSS и JS файлы
-- `instance/` — база данных (SQLite3, SQLAlchemy)
+## Project Structure
 
-## Функциональности
+```text
+app.py          # Main Flask application
+templates/      # HTML templates
+static/         # CSS, JavaScript, images
+instance/       # SQLite database
+```
 
-1. **Регистрация и аутентификация**: Пользователи могут зарегистрироваться, создав свой аккаунт, и входить в систему с помощью учетных данных.
-   <img src="images/reg_log.png">
-2. **Создание статей**: Пользователи могут публиковать новые статьи.
-    <img src="images/add.png">
-3. **Редактирование и удаление статей**: Пользователи имеют возможность редактировать и удалять свои собственные статьи.
-    <img src="images/my_posts.png">
-4. **Просмотр статей**: Пользователи могут просматривать статьи, опубликованные другими пользователями.
-    <img src="images/my_posts_flask.png">
-5. **Редактирование профиля**: Пользователи могут редактировать информацию в своем профиле, такую как имя, фамилия, электронная почта, социальные ссылки и т. д.
-    <img src="images/red_prof.png">
-6. **Страница профиля**: Каждый пользователь имеет свою собственную страницу профиля, где отображается информация о нем и его опубликованные статьи.
-   <img src="images/profile.png">
-7. **Панель управления статьями**: Пользователи могут увидеть список своих собственных статей на отдельной странице.
+## Installation
 
-## Технические детали
+```bash
+pip install -r requirements.txt
+python app.py
+```
 
-Проект разработан с использованием следующих технологий и инструментов:
+Open:
 
-- **Flask**: Микрофреймворк Python для веб-приложений.
-- **SQLAlchemy**: ORM (Объектно-реляционное отображение) для работы с базами данных в Python.
-- **Flask-Login**: Расширение Flask для управления аутентификацией пользователей.
-- **Flask-CKEditor**: Расширение Flask для интеграции редактора CKEditor.
-- **Werkzeug**: Библиотека для обеспечения безопасности веб-приложений в Flask.
-- **Pillow (PIL)**: Библиотека для обработки изображений в Python.
+```text
+http://localhost:5000
+```
+
+## Screenshots
+
+### Home Page
+
+![Home Page](images/my_posts_flask.png)
+
+### User Profile
+
+![Profile](images/profile.png)
+
+## Learning Objectives
+
+This project was developed to gain practical experience with:
+
+* Backend development using Flask
+* Database management with SQLAlchemy
+* User authentication and authorization
+* CRUD operations
+* Web application architecture
